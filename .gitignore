@@ -1,30 +1,14 @@
-# ==============
-# |  Composer  |
-# ==============
-# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
-#
-
-composer.phar
-/vendor/
-
-# ==============
-# |  Vagrant   |
-# ==============
-# 
-# OS-specific
-.DS_Store
-
-# Editor swapfiles
-.*.sw?
-*~
-
-# Vagrant stuff
-acceptance_config.yml
-boxes/*
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vscode
 /.vagrant
-/website/.vagrant
-/website/build
-/vagrant-spec.config.rb
-test/vagrant-spec/.vagrant/
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+.phpunit.result.cache
