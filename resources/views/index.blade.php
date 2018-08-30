@@ -12,6 +12,15 @@
 
         <!-- Styles -->
         <style>
+        /* important defaults */
+        img {
+            width: 100%;
+            height: auto;
+        }
+        /* end important defaults  */
+
+
+
             body {
                 background-image: url("/img/bg-town.jpg");
                 background-repeat: no-repeat;
@@ -21,87 +30,146 @@
                 margin: 0;
             }
 
+
             #app {
                 height: 100%;
-                display:grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: 1fr 2fr; 
-                /* align-items:stretch; */
-                /* grid-column-gap: 100px; */
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr auto 1fr;
+                grid-template-areas:
+                    ". . . . amagami-title amagami-title"
+                    "portraits-container portraits-container portraits-container portraits-container portraits-container portraits-container"
+                    ". . . . . .";
             }
 
-#amagami-title {  
-    grid-column: 2/span 2;
-    /* grid-row: 1/span 1; */
-    width: 100%;
-    height: auto;
-    /* justify-self: center; */
-     }
 
-     #rihoko-vert{
-        /* grid-column: 2/span 2;
-    grid-row: 2/span 3; */
-    width: 100%;
-    height: auto;
-     } 
-     #tsukasa-vert{
-        /* grid-column: 4/span 2;
-    grid-row: 2/span 3; */
-    width: 100%;
-    height: auto;
-     } 
-     #sae-vert{
-        /* grid-column: 6/span 2;
-    grid-row: 2/span 3; */
-    width: 100%;
-    height: auto;
-     } 
-     #kaoru-vert{
-        /* grid-column: 8/span 1;
-    grid-row: 2/span 3; */
-    width: 100%;
-    height: auto;
-     } 
-     #haruka-vert{
-        /* grid-column: 10/span 1;
-    grid-row: 2/span 3; */
-    width: 100%;
-    height: auto;
-     } 
-     #ai-vert{
-        /* grid-column: 12/span 1;
-    grid-row: 2/span 3; */
-    width: 100%;
-    height: auto;
-     } 
+
+#amagami-title {
+    justify-self: end;
+    grid-area: amagami-title;
+}
+
+#tsukasa-portrait{
+    grid-area:tsukasa-portrait;
+}
+#rihoko-portrait{
+    grid-area:rihoko-portrait;
+} 
+#sae-portrait{
+    grid-area:sae-portrait;
+}
+#kaoru-portrait{
+    grid-area:kaoru-portrait;
+}
+#haruka-portrait{
+    grid-area:haruka-portrait;
+} 
+#ai-portrait{
+    grid-area:ai-portrait;
+}    
+
+     .vert-portrait:hover {
+         box-sizing: border-box;
+	border: 4px solid #f5b869;
+}
+
+
+/* ================  */
+/* Media Queries     */
+/* ================  */
+@media only screen {
+    #portraits-container {
+        display:grid;
+        grid-template-columns: repeat(13,1fr);
+        grid-area: portraits-container;
+        grid-template-areas:
+        ". tsukasa-portrait . rihoko-portrait . sae-portrait . kaoru-portrait . haruka-portrait . ai-portrait .";
+    }
+ }
+
+@media only screen and (max-width: 1024px)  {
+    #portraits-container {
+        display:grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-area: portraits-container;
+        grid-template-areas:
+        "tsukasa-portrait . rihoko-portrait . sae-portrait . kaoru-portrait . haruka-portrait . ai-portrait";
+    }
+ }
+
+@media only screen and (max-width: 768px)  {
+    #portraits-container {
+        display:grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-area: portraits-container;
+        grid-template-areas:
+        "tsukasa-portrait . rihoko-portrait . sae-portrait . kaoru-portrait"
+        ". haruka-portrait . ai-portrait . . .";
+    }
+ }
+
+ @media only screen and (max-width: 375px)  {
+    #portraits-container {
+        grid-template-columns: repeat(6,1fr);
+        grid-area: portraits-container;
+        grid-template-areas:
+        "tsukasa-portrait . rihoko-portrait . sae-portrait ."
+        ". kaoru-portrait . haruka-portrait . ai-portrait";
+    }
+ }
+
+
+/* @media only screen and (max-width: 500px)  {
+    .wrapper {
+
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+    "header   header"
+        "sidebar  content"
+        "sidebar2 sidebar2"
+        "footer   footer";
+    }
+    }
+
+    @media only screen and (max-width: 768px)   {
+        #portraits-container{
+         grid-column-gap:25px;
+         grid-row-gap: 25px;
+
+     }
      #portraits-container{
-         display:grid;
-         grid-template-columns:repeat(6,1fr);
-         /* grid-column:1/span 4; */
-         /* grid-template-rows:repeat(4,1fr);; */
-         grid-column: 2/span 2;
-         grid-column-gap:50px;
+         grid-template-columns:repeat(4,2fr);
+         grid-template-rows:repeat(2,1fr);
 
      }
+     #app {
+                grid-template-columns: 1fr 1fr 1fr 1fr ; 
+                grid-template-rows: 1fr 4fr; 
+            }
+    } */
+/* ================  */
+/* End Media Queries     */
+/* ================  */
+
         </style>
     </head>
     <body>
     <div id="app">
-    <img id="amagami-title" src="/img/amagami-ss-title.png" width="800"; alt="">
+    
+    <img id="amagami-title"  src="/img/amagami-ss-title.png" width="800" alt="">
     <div id="portraits-container">
- <img id="rihoko-vert" src="/img/rihoko-vert.png" width="266" alt="">
-    <img id="tsukasa-vert" src="/img/tsukasa-vert.png" width="266"  alt="">
-    <img id="sae-vert" src="/img/sae-vert.png" width="266" alt="">
-    <img id="kaoru-vert" src="/img/kaoru-vert.png" width="266"  alt="">
-    <img id="haruka-vert" src="/img/haruka-vert.png" width="266"  alt="">
-    <img id="ai-vert" src="/img/ai-vert.png" width="266"  alt="">
+    <a href="/tsukasa-ayatsuji" id="tsukasa-portrait" ><img  class="vert-portrait" src="/img/tsukasa-vert.png" width="266"  alt=""></a>
     
+    <a href="" id="rihoko-portrait"><img  class="vert-portrait" src="/img/rihoko-vert.png" width="266" alt=""></a>
+    <a href="" id="sae-portrait" ><img class="vert-portrait" src="/img/sae-vert.png" width="266" alt=""></a>
+    <a href="" id="kaoru-portrait" ><img class="vert-portrait" src="/img/kaoru-vert.png" width="266"  alt="">
+</a>
+<a href="" id="haruka-portrait" ><img class="vert-portrait" src="/img/haruka-vert.png" width="266"  alt="">
+</a>
+<a href="" id="ai-portrait" ><img class="vert-portrait" src="/img/ai-vert.png" width="266"  alt="">
+</a>
     </div>
-    
 
-    </div>
-
-    
-    
+</div>
     </body>
 </html>

@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/tsukasa-ayatsuji', function () {
+    return view('tsukasa-ayatsuji');
+});
+
+Route::get('/tsukasa-ayatsuji/media', function () {
+    return view('tsukasa-ayatsuji/media');
+});

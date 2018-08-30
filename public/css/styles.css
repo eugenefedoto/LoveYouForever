@@ -1,0 +1,191 @@
+        /* Defaults */
+        * {
+            margin:0px;
+            padding:0px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        /* End Defaults  */
+
+        body {
+            background:linear-gradient(45deg, rgba(36, 193, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            color: #fff;
+        }
+
+        #app {
+            display: grid;
+            grid-template-areas: 
+            "bio-nav-container"
+            "grid";        
+        }
+        .bio-nav-container{
+            justify-items:center;
+            grid-template-rows: 1fr 6fr;
+            display:grid;
+            grid-template-areas: 
+            "nav"
+            "biography";
+        }
+        .biography {
+            /*stitching*/
+            outline: 1px dashed #98abb9;
+            outline-offset: -5px;
+            background-color: #556068;
+
+            grid-area: biography;
+            justify-self: center;
+            
+            /*shadow*/
+            box-shadow: 2px 2px 2px #000;
+        }
+        .grid-sizer, .grid-item {
+            width: 48%;
+        }
+        .gutter-sizer { 
+            width: 4%; 
+        }
+        .bio-nav-container{
+            grid-area: bio-nav-container;
+        }
+
+        /* dropdown */
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+      
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+
+        .nav a {
+            display: block;
+            padding: 0 16px;
+            line-height: inherit;
+            cursor: pointer;
+        }
+
+        .nav__menu {
+            line-height: 45px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .nav__menu-item {
+            display: inline-block;
+            position: relative;
+        }
+
+        .nav__menu-item:hover {
+            background-color: #9b59b6;
+            z-index:1;
+        }
+
+        .nav__menu-item:hover .nav__submenu {
+            display: block;
+        }
+
+        .nav__submenu {
+            font-weight: 300;
+            text-transform: none;
+            display: none;
+            position: absolute;
+            width: inherit;
+            background-color: #9b59b6;
+        }
+
+        .nav__submenu-item:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        /* end dropdown */
+        /* start biography */
+
+        p {
+            font-size: 16px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 10px;
+            padding-top: 10px;
+        }
+
+        /* end biography */
+        
+        .nav {
+            grid-area: nav;
+            /* align-self: center; */
+        }
+
+        .name {
+            grid-area: name;
+        }
+
+        .name {
+            justify-self: center;
+        }
+        .grid{
+            grid-area: grid;
+            display: grid;
+        }
+
+/* end biography */
+body, html{
+    min-height:100%;
+}
+
+
+.nav{
+    align-self: end;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 437px) {
+    .biography > p {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 695px) {
+    .grid-sizer, .grid-item {
+        width: 32%;
+    }
+    .gutter-sizer { 
+        width: 2%; 
+    }
+}
+@media only screen and (min-width: 1119px) {
+    .bio-nav-container{
+        grid-template-rows: 10% 1fr 1fr 1fr;
+    }
+    .grid-sizer, .grid-item {
+        width: 24%;
+    }
+    .gutter-sizer { 
+        width: 1%; 
+    }
+    #app{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "grid bio-nav-container"
+    }
+}
+/* End Media Queries */
