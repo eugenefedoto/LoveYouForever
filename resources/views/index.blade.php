@@ -9,149 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-        /* important defaults */
-        img {
-            width: 100%;
-            height: auto;
-        }
-        /* end important defaults  */
-
-
-
-            body {
-                background-image: url("/img/bg-town.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center top;
-                height: 100vh;
-                margin: 0;
-            }
-
-
-            #app {
-                height: 100%;
-                display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: 1fr auto 1fr;
-                grid-template-areas:
-                    ". . . . amagami-title amagami-title"
-                    "portraits-container portraits-container portraits-container portraits-container portraits-container portraits-container"
-                    ". . . . . .";
-            }
-
-
-
-#amagami-title {
-    justify-self: end;
-    grid-area: amagami-title;
-}
-
-#tsukasa-portrait{
-    grid-area:tsukasa-portrait;
-}
-#rihoko-portrait{
-    grid-area:rihoko-portrait;
-} 
-#sae-portrait{
-    grid-area:sae-portrait;
-}
-#kaoru-portrait{
-    grid-area:kaoru-portrait;
-}
-#haruka-portrait{
-    grid-area:haruka-portrait;
-} 
-#ai-portrait{
-    grid-area:ai-portrait;
-}    
-
-     .vert-portrait:hover {
-         box-sizing: border-box;
-	border: 4px solid #f5b869;
-}
-
-
-/* ================  */
-/* Media Queries     */
-/* ================  */
-@media only screen {
-    #portraits-container {
-        display:grid;
-        grid-template-columns: repeat(13,1fr);
-        grid-area: portraits-container;
-        grid-template-areas:
-        ". tsukasa-portrait . rihoko-portrait . sae-portrait . kaoru-portrait . haruka-portrait . ai-portrait .";
-    }
- }
-
-@media only screen and (max-width: 1024px)  {
-    #portraits-container {
-        display:grid;
-        grid-template-columns: repeat(12,1fr);
-        grid-area: portraits-container;
-        grid-template-areas:
-        "tsukasa-portrait . rihoko-portrait . sae-portrait . kaoru-portrait . haruka-portrait . ai-portrait";
-    }
- }
-
-@media only screen and (max-width: 768px)  {
-    #portraits-container {
-        display:grid;
-        grid-template-columns: repeat(8,1fr);
-        grid-area: portraits-container;
-        grid-template-areas:
-        "tsukasa-portrait . rihoko-portrait . sae-portrait . kaoru-portrait"
-        ". haruka-portrait . ai-portrait . . .";
-    }
- }
-
- @media only screen and (max-width: 375px)  {
-    #portraits-container {
-        grid-template-columns: repeat(6,1fr);
-        grid-area: portraits-container;
-        grid-template-areas:
-        "tsukasa-portrait . rihoko-portrait . sae-portrait ."
-        ". kaoru-portrait . haruka-portrait . ai-portrait";
-    }
- }
-
-
-/* @media only screen and (max-width: 500px)  {
-    .wrapper {
-
-        grid-template-columns: 20% auto;
-        grid-template-areas:
-    "header   header"
-        "sidebar  content"
-        "sidebar2 sidebar2"
-        "footer   footer";
-    }
-    }
-
-    @media only screen and (max-width: 768px)   {
-        #portraits-container{
-         grid-column-gap:25px;
-         grid-row-gap: 25px;
-
-     }
-     #portraits-container{
-         grid-template-columns:repeat(4,2fr);
-         grid-template-rows:repeat(2,1fr);
-
-     }
-     #app {
-                grid-template-columns: 1fr 1fr 1fr 1fr ; 
-                grid-template-rows: 1fr 4fr; 
-            }
-    } */
-/* ================  */
-/* End Media Queries     */
-/* ================  */
-
-        </style>
+        <link rel="stylesheet" href="/css/index-style.css">
     </head>
     <body>
     <div id="app">
@@ -160,16 +18,23 @@
     <div id="portraits-container">
     <a href="/tsukasa-ayatsuji" id="tsukasa-portrait" ><img  class="vert-portrait" src="/img/tsukasa-vert.png" width="266"  alt=""></a>
     
-    <a href="" id="rihoko-portrait"><img  class="vert-portrait" src="/img/rihoko-vert.png" width="266" alt=""></a>
-    <a href="" id="sae-portrait" ><img class="vert-portrait" src="/img/sae-vert.png" width="266" alt=""></a>
-    <a href="" id="kaoru-portrait" ><img class="vert-portrait" src="/img/kaoru-vert.png" width="266"  alt="">
+    <a href="/rihoko-sakurai" id="rihoko-portrait"><img  class="vert-portrait" src="/img/rihoko-vert.png" width="266" alt=""></a>
+    <a href="/sae-nakata" id="sae-portrait" ><img class="vert-portrait" src="/img/sae-vert.png" width="266" alt=""></a>
+    <a href="/kaoru-tanamachi" id="kaoru-portrait" ><img class="vert-portrait" src="/img/kaoru-vert.png" width="266"  alt=""></a>
 </a>
-<a href="" id="haruka-portrait" ><img class="vert-portrait" src="/img/haruka-vert.png" width="266"  alt="">
+<a href="/haruka-morishima" id="haruka-portrait" ><img class="vert-portrait" src="/img/haruka-vert.png" width="266"  alt="">
 </a>
-<a href="" id="ai-portrait" ><img class="vert-portrait" src="/img/ai-vert.png" width="266"  alt="">
+<a href="/ai-nanasaki" id="ai-portrait" ><img class="vert-portrait" src="/img/ai-vert.png" width="266"  alt="">
 </a>
     </div>
 
 </div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="/js/app.js"></script>
     </body>
 </html>

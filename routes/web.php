@@ -19,6 +19,22 @@ Route::get('/tsukasa-ayatsuji', function () {
     return view('tsukasa-ayatsuji');
 });
 
-Route::get('/tsukasa-ayatsuji/media', function () {
-    return view('tsukasa-ayatsuji/media');
+Route::get('/rihoko-sakurai', function () {
+    return view('rihoko-sakurai');
+});
+
+Route::get('/sae-nakata', function () {
+    return view('sae-nakata');
+});
+
+Route::get('/kaoru-tanamachi', function () {
+    return view('kaoru-tanamachi');
+});
+
+Route::get('/haruka-morishima', function () {
+    return view('haruka-morishima');
+});
+
+Route::get('/ai-nanasaki', function () {
+    return view('ai-nanasaki');
 });
