@@ -1,6 +1,6 @@
 # LoveYouForever
 
-The idea came about after I noticed a lack of websites about the popular game and anime. Instead of making another generic website that I'd have no reason to continue working on, the topic of Amagami SS allowed me to create an exciting playground for developing new skills into the future.
+A creative playground for myself - based on the hit game and anime Amagami SS. It started out as a challenge to learn CSS Grid Layout and Docker. Soon it transformed into a playground, allowing me to test out new features and frameworks on a whim.
 
 # Setup
 
