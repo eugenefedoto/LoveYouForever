@@ -1,7 +1,4 @@
 # LoveYouForever
-A website about the Amagami SS girls - Online at [LoveYouForever](http://loveyouforever-env.h2mmbmyxgf.us-east-2.elasticbeanstalk.com/)
-
-# About
 
 The idea came about after I noticed a lack of websites about the popular game and anime. Instead of making another generic website that I'd have no reason to continue working on, the topic of Amagami SS allowed me to create an exciting playground for developing new skills into the future.
 
